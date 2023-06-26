@@ -1,12 +1,16 @@
-import { Box } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import Application from "./components/Application";
+import theme from "./utils/theme";
 
 function App() {
   return (
-    <Box>
-      <Application />
-    </Box>
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      <Box>
+        <Application />
+      </Box>
+    </ThemeProvider>
   );
 }
 
