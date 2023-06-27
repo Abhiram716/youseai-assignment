@@ -18,7 +18,7 @@ const Application = () => {
         pb: 8,
         pr: 12,
         pl: 9,
-        bgcolor: theme.palette.secondary.main,
+        bgcolor: theme.palette.primary.light,
       }}
     >
       {/* <SearchBar /> */}

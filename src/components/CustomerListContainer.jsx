@@ -31,7 +31,7 @@ const CustomerListContainer = () => {
           <Box sx={{ ml: "345px" }}>
             <SearchBar />
           </Box>
-          <Box>
+					<Box sx={{ml:"16px"}}>
             <DropDownMenu />
           </Box>
         </Box>

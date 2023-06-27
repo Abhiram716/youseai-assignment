@@ -10,7 +10,6 @@ const SearchBar = () => {
       sx={{
         borderRadius: "10px",
         width: "216px",
-        height:"38px"
       }}
     >
       <TextField
@@ -19,10 +18,20 @@ const SearchBar = () => {
         variant="outlined"
         size="small"
         autoComplete="off"
-        sx={{ bgcolor: theme.palette.secondary.main, borderRadius: "10px" }}
+        sx={{
+          bgcolor: theme.palette.primary.light,
+          borderRadius: "10px",
+          "& .MuiOutlinedInput-notchedOutline": {
+            border: "none",
+            borderRadius: "15px",
+          },
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            border: "none",
+          },
+        }}
         InputProps={{
           sx: {
-            height:"38px"
+            height: "38px",
           },
           startAdornment: (
             <InputAdornment position="start">
