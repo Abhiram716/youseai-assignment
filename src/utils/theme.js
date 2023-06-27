@@ -11,6 +11,23 @@ const theme = createTheme({
       contrastText: "#ACACAC",
     },
   },
+  components: {
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          "& .MuiOutlinedInput-notchedOutline": {
+            border: `none`,
+            borderRadius: `15px`,
+          },
+          "&:hover": {
+            "& .MuiOutlinedInput-notchedOutline": {
+              border: `none`,
+            },
+          },
+        },
+      },
+    },
+  },
 });
 
 export default theme;
