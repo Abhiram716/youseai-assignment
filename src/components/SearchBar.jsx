@@ -5,12 +5,25 @@ import theme from "../utils/theme";
 
 const SearchBar = () => {
   return (
-    <Paper elevation={8}>
+    <Paper
+      elevation={4}
+      sx={{
+        borderRadius: "10px",
+        width: "216px",
+        height:"38px"
+      }}
+    >
       <TextField
-        size="small"
+        fullWidth
+        placeholder="search"
         variant="outlined"
-        sx={{ bgcolor: theme.palette.primary.main, borderRadius:"15px"}}
+        size="small"
+        autoComplete="off"
+        sx={{ bgcolor: theme.palette.secondary.main, borderRadius: "10px" }}
         InputProps={{
+          sx: {
+            height:"38px"
+          },
           startAdornment: (
             <InputAdornment position="start">
               <IconButton>

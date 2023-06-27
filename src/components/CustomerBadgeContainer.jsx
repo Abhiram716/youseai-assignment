@@ -6,7 +6,7 @@ import CoustemerBadge from "./CoustemerBadge";
 const CustomerBadgeContainer = () => {
   return (
     <Paper
-      elevation={6}
+      elevation={4}
       sx={{
         display: "flex",
         justifyContent: "center",

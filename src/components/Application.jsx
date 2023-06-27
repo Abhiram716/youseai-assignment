@@ -1,8 +1,10 @@
 import { Box } from "@mui/material";
 import React from "react";
 import CustomerBadgeContainer from "./CustomerBadgeContainer";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 import theme from "../utils/theme";
+import CustomerListContainer from "./CustomerListContainer";
+
 
 const Application = () => {
   return (
@@ -11,17 +13,17 @@ const Application = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-				justifyContent: "center",
-				pt: 5,
-				pb: 8,
-				pr: 12,
-				pl:9,
+        justifyContent: "center",
+        pt: 5,
+        pb: 8,
+        pr: 12,
+        pl: 9,
         bgcolor: theme.palette.secondary.main,
-				
       }}
     >
-      <SearchBar />
+      {/* <SearchBar /> */}
       <CustomerBadgeContainer />
+      <CustomerListContainer />
     </Box>
   );
 };
