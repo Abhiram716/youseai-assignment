@@ -2,7 +2,6 @@ import { Box, Paper, Typography } from "@mui/material";
 import * as React from "react";
 import CustomersList from "./CustomersList";
 import SearchBar from "./SearchBar";
-import DropDownMenu from "./DropDownMenu";
 
 const CustomerListContainer = () => {
   return (
@@ -30,9 +29,6 @@ const CustomerListContainer = () => {
           <Typography>All Customers</Typography>
           <Box sx={{ ml: "345px" }}>
             <SearchBar />
-          </Box>
-					<Box sx={{ml:"16px"}}>
-            <DropDownMenu />
           </Box>
         </Box>
         <CustomersList />

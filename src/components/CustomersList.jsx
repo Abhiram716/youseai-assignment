@@ -1,54 +1,135 @@
 import * as React from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import { DataGrid } from "@mui/x-data-grid";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+const columns = [
+  { field: "id", headerName: "ID", width: 90 },
+  {
+    field: "firstName",
+    headerName: "First name",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "username",
+    headerName: "User Name",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "email",
+    headerName: "Email",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "city",
+    headerName: "City",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "company",
+    headerName: "Company",
+    width: 150,
+    editable: true,
+  },
 ];
 
-export default function BasicTable() {
+const rows = [
+  {
+    id: 1,
+    firstName: "Jon",
+    username: "snow",
+    email: "jhonsnow@gmail.com",
+    city: "Night's watch",
+    company: "stark industry",
+  },
+  {
+    id: 2,
+    firstName: "Cersei",
+    username: "Lannister",
+    email: "cersei123@gmail.com",
+    city: "The Iron Throne",
+    company: "The Failure",
+  },
+  {
+    id: 3,
+    firstName: "Jaime",
+    username: "Lannister",
+    email: "onehandjaime@gmail.com",
+    city: "The Iron Throne",
+    company: "The Dissapointment",
+  },
+  {
+    id: 4,
+    firstName: "Arya",
+    username: "stark",
+    email: "starkarya@gmail.com",
+    city: "winter fall",
+    company: "stark industry",
+  },
+  {
+    id: 5,
+    firstName: "Daenerys",
+    username: "Targareyan",
+    email: "villanwedidnotexpect@gmail.com",
+    city: "Dragon stone",
+    company: "The Mining Company",
+  },
+  {
+    id: 6,
+    firstName: "Abhi",
+    username: "Kantipudi",
+    email: "a4abhiram125t@gmail.com",
+    city: "Kakinada",
+    company: "blah blah",
+  },
+  {
+    id: 7,
+    firstName: "Ferrara",
+    username: "Clifford",
+    email: "a4abhiram125t@gmail.com",
+    city: "Rajamundry",
+    company: "Ferrara roacher",
+  },
+  {
+    id: 8,
+    firstName: "Rossini",
+    username: "Frances",
+    email: "a4abhiram125t@gmail.com",
+    city: "New york",
+    company: "The Crossant Company",
+  },
+  {
+    id: 9,
+    firstName: "Harvey",
+    username: "Specter",
+    email: "a4abhiram125t@gmail.com",
+    city: "Chicago",
+    company: "Pearson spector",
+  },
+];
+
+const CustomerList = () => {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <Box sx={{ height: 400, width: "100%" }}>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 5,
+            },
+          },
+        }}
+        pageSizeOptions={[5]}
+        checkboxSelection
+        disableRowSelectionOnClick
+      />
+    </Box>
   );
-}
+};
+
+export default CustomerList;
