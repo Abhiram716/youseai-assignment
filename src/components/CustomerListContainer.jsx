@@ -21,13 +21,13 @@ const CustomerListContainer = () => {
         <Box
           sx={{
             display: "flex",
-            justifycontent: "center",
+            justifyContent:"space-between",
             alignItem: "center",
             mb: 5,
           }}
         >
           <Typography>All Customers</Typography>
-          <Box sx={{ ml: "345px" }}>
+          <Box >
             <SearchBar />
           </Box>
         </Box>

@@ -8,31 +8,26 @@ const columns = [
     field: "firstName",
     headerName: "First name",
     width: 150,
-    editable: true,
   },
   {
     field: "username",
     headerName: "User Name",
     width: 150,
-    editable: true,
   },
   {
     field: "email",
     headerName: "Email",
     width: 150,
-    editable: true,
   },
   {
     field: "city",
     headerName: "City",
     width: 150,
-    editable: true,
   },
   {
     field: "company",
     headerName: "Company",
     width: 150,
-    editable: true,
   },
 ];
 
@@ -125,8 +120,7 @@ const CustomerList = () => {
           },
         }}
         pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
+        disableColumnMenu
       />
     </Box>
   );
