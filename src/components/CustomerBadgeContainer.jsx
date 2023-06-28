@@ -1,7 +1,9 @@
 import { Paper } from "@mui/material";
 import React from "react";
 import theme from "../utils/theme";
-import CoustemerBadge from "./CoustemerBadge";
+import ActiveCustomers from "./ActiveCustomers";
+import TotalCustomers from "./TotalCustomers";
+import TotalMembers from "./TotalMembers";
 
 const CustomerBadgeContainer = () => {
   return (
@@ -9,7 +11,7 @@ const CustomerBadgeContainer = () => {
       elevation={4}
       sx={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         width: "968px",
         height: "151px",
@@ -18,7 +20,9 @@ const CustomerBadgeContainer = () => {
         mt: 5,
       }}
     >
-      <CoustemerBadge />
+      <TotalCustomers />
+      <TotalMembers />
+      <ActiveCustomers />
     </Paper>
   );
 };

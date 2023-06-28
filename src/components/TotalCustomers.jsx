@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import usersSvg from "../assets/img/users.svg";
 import theme from "../utils/theme";
-const CoustemerBadge = () => {
+const TotalCustomers = () => {
   return (
     <Box sx={{ display: "flex", mt: 4, ml: 7, mb: 4 }}>
       <Box sx={{ mr: 3 }}>
@@ -15,4 +15,4 @@ const CoustemerBadge = () => {
   );
 };
 
-export default CoustemerBadge;
+export default TotalCustomers;
