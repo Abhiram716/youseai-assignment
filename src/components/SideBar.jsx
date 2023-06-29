@@ -14,7 +14,7 @@ const SideBar = () => {
   return (
     <Box sx={{ height: "100vh" }}>
       <Sidebar
-        backgroundColor={theme.palette.primary.light}
+        backgroundColor={theme.palette.primary.main}
         style={{ height: "100%" }}
         collapsed={collapseed}
       >
